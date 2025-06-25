@@ -1,0 +1,11 @@
+services:
+  backend:
+    build:
+      context: Stash/stash-backend/api/
+      dockerfile: Dockerfile  # explícitamente decláralo
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SUPABASE_JWT_SECRET: NJ5H8hTV2nxphHMjuvnhEdSURvDpZQU83UA7bhI/XeGtlUdl1AwrxEn4URBKNR1Ro1ugQpCsd8CK9FYXTDY6Gw==
+      SUPABASE_DB_URL: jdbc:postgresql://db.xwvsecylvwtvuusndqko.supabase.co:5432/postgres?user=postgres&password=FrostyBagsBagaces
